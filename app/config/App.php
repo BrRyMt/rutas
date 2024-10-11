@@ -7,7 +7,7 @@ const VERSION = "1.0";
 date_default_timezone_set("America/Lima");
 
 //Métodos comunes en toda la App
-function renderContentHeader($Titulo = "", $ruta = "",)
+function renderContentHeader($Titulo = "", $path = "", $root = "")
 {
   return
     "<div class='content-header'>
@@ -18,7 +18,7 @@ function renderContentHeader($Titulo = "", $ruta = "",)
           </div>
           <div class='col-sm-6'>
             <ol class='breadcrumb float-sm-right'>
-              <li class='breadcrumb-item'><a href='#'>{$ruta}</a></li>
+              <li class='breadcrumb-item'><a href='{$root}'>{$path}</a></li>
               <li class='breadcrumb-item active'>{$Titulo}</li>
             </ol>
           </div>
